@@ -48,7 +48,6 @@ export default function HomePage() {
     fetchFeaturedCountries();
   }, []);
 
-  // Add new effect for fetching favorite countries
   useEffect(() => {
     const fetchFavoriteCountries = async () => {
       if (!user) {
@@ -91,10 +90,10 @@ export default function HomePage() {
           ></div>
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 flex flex-col items-center justify-center text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-black mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Discover Our World
             </h1>
-            <p className="text-xl md:text-2xl text-gray-800 max-w-3xl mb-10">
+            <p className="text-xl md:text-2xl text-gray-100 max-w-3xl mb-10">
               Explore detailed information about countries, cultures, languages,
               and more from all around the globe
             </p>
@@ -108,17 +107,17 @@ export default function HomePage() {
                 { value: "8 Billion+", label: "People" },
               ].map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-black">
+                  <div className="text-3xl md:text-4xl font-bold text-white">
                     {stat.value}
                   </div>
-                  <div className="text-gray-800">{stat.label}</div>
+                  <div className="text-gray-100">{stat.label}</div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Favorite Countries Section - Only show if user is logged in and has favorites */}
+        {/* Favorite Countries Section  */}
         {user && favoriteCountries.length > 0 && (
           <section className="py-16 bg-gray-50 dark:bg-gray-800">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -354,33 +353,6 @@ export default function HomePage() {
                   </p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="bg-blue-600 text-white py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold mb-4">
-              Ready to Explore the World?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Create an account to save your favorite countries, compare
-              statistics, and more.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/auth/register"
-                className="px-8 py-3 bg-white text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-colors"
-              >
-                Sign Up for Free
-              </Link>
-              <Link
-                to="/countries"
-                className="px-8 py-3 bg-blue-700 text-white font-medium rounded-lg hover:bg-blue-800 transition-colors"
-              >
-                Browse Countries
-              </Link>
             </div>
           </div>
         </section>
