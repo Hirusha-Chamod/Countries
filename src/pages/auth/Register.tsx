@@ -52,7 +52,7 @@ const RegisterPage: React.FC = () => {
             Create your account
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
-            Join WorldExplorer to discover countries around the globe
+            Join ExploreWorld to discover countries around the globe
           </p>
         </div>
 

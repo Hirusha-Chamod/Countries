@@ -118,20 +118,6 @@ export default function Header() {
             >
               Countries
             </Link>
-            <Link
-              to="/regions"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
-              onClick={() => setIsOpen(false)}
-            >
-              Regions
-            </Link>
-            <Link
-              to="/about"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
-              onClick={() => setIsOpen(false)}
-            >
-              About
-            </Link>
 
             {!loading && (
               <>

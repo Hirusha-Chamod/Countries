@@ -33,7 +33,7 @@ const LoginPage: React.FC = () => {
             Sign in to your account
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
-            Welcome back to WorldExplorer
+            Welcome back to ExploreWorld
           </p>
         </div>
 
