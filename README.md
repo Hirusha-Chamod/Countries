@@ -1,54 +1,129 @@
-# React + TypeScript + Vite
+Yooo nice deployment! 🔥 Clean and snappy, love the Vercel flex. Since you're using **Tailwind CSS** and not MUI/Bootstrap, and your hosted app is live at [`countries-wheat-pi.vercel.app`](https://countries-wheat-pi.vercel.app/), here's your updated `README.md` with all the right vibes:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+````markdown
+# 🌍 REST Countries Explorer
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A sleek, responsive React + TypeScript app to explore countries using the [REST Countries API](https://restcountries.com/). Built for the **SE3040 – Application Frameworks** course at **SLIIT**. Features Firebase authentication and the ability to bookmark your favorite countries!
 
-## Expanding the ESLint configuration
+## 🔗 Live Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+👉 [Check it out here!](https://countries-wheat-pi.vercel.app/)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## ⚙️ Features
+
+- 🔐 **User Login** with Firebase Auth
+- 🌎 Browse All Countries
+- 🔍 Search by Country Name
+- 🗺️ Filter by Region & Language
+- 📌 **Bookmark Your Favorites** (saved via Firestore)
+- 📱 Fully Responsive UI
+- ⚛️ SPA built with React Router + Hooks
+- 🎯 TypeScript + Tailwind CSS for clean structure and styling
+- 🧪 Unit & integration tested with Jest + RTL
+
+---
+
+## 🛠️ Tech Stack
+
+| Tool/Tech          | Role                                 |
+| ------------------ | ------------------------------------ |
+| React + Vite       | Frontend Framework & Dev Environment |
+| TypeScript         | Static typing for better DX          |
+| Tailwind CSS       | Utility-first styling                |
+| Firebase           | Auth + Firestore DB                  |
+| React Router       | Page navigation                      |
+| REST Countries API | Country data source                  |
+| Jest + RTL         | Testing framework                    |
+
+---
+
+## 🔐 Firebase Authentication
+
+- Supports email/password login
+- Authenticated users can save their favorite countries
+- Favorites persist across sessions using Firebase Firestore
+
+---
+
+## 📦 API Endpoints Used
+
+- `GET /all` – List all countries
+- `GET /name/{name}` – Search by country name
+- `GET /region/{region}` – Filter by region
+- `GET /alpha/{code}` – Get full details
+
+---
+
+## 🧠 How It Works
+
+1. App fetches data from REST Countries API and caches it locally
+2. Users can filter/search countries or click to view details
+3. After login, users can bookmark countries as favorites
+4. Favorites are stored and synced with Firestore
+
+---
+
+## 🧑‍💻 Getting Started
+
+### 1. Clone the Repo
+
+```bash
+git clone https://github.com/SE1020-IT2070-OOP-DSA-25/af-2-it22311290.git
+```
+````
+
+### 2. Install Dependencies
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 3. Setup Firebase
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Create a Firebase project
+- Enable **Email/Password Auth** + **Firestore DB**
+- Add `.env` file with your config:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```env
+VITE_FIREBASE_API_KEY=your_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_project_id.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_project_id.appspot.com
+VITE_FIREBASE_MESSAGING_SENDER_ID=sender_id
+VITE_FIREBASE_APP_ID=app_id
+```
+
+### 4. Start the Dev Server
+
+```bash
+npm run dev
+```
+
+---
+
+## 🧪 Running Tests
+
+```bash
+npm test
+```
+
+Covers:
+
+- Component rendering
+- API interaction
+- User flows (auth, add/remove favorites)
+
+---
+
+---
+
+```
+
+---
+
+
 ```
