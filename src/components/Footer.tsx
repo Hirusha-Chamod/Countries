@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center gap-2 mb-6 md:mb-0">
             <span className="font-bold text-xl text-blue-600 dark:text-blue-400">
-              WorldExplorer
+              ExploreWorld
             </span>
             <span className="text-gray-500">|</span>
             <span className="text-sm text-gray-600 dark:text-gray-400">
@@ -110,10 +110,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-800 text-center text-sm text-gray-500 dark:text-gray-400">
-          <p>
-            © {new Date().getFullYear()} WorldExplorer. All rights reserved.
-          </p>
-          <p className="mt-2">Built with React and Tailwind CSS</p>
+          <p>© {new Date().getFullYear()} ExploreWorld. All rights reserved.</p>
         </div>
       </div>
     </footer>

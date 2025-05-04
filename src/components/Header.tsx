@@ -24,8 +24,8 @@ export default function Header() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                WorldExplorer
+              <span className="text-2xl font-bold text-red-600 dark:text-blue-400">
+                ExploreWorld
               </span>
             </Link>
           </div>
@@ -37,12 +37,6 @@ export default function Header() {
               className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
             >
               Countries
-            </Link>
-            <Link
-              to="/regions"
-              className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
-            >
-              Regions
             </Link>
 
             {!loading && (

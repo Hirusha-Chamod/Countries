@@ -246,15 +246,15 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Browse by Region Section */}
+        {/* Regions Section */}
         <section className="py-16 bg-gray-50 dark:bg-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-                Browse by Region
+                Explore by Region
               </h2>
               <p className="mt-4 text-xl text-gray-600 dark:text-gray-300">
-                Explore countries from different parts of the world
+                Discover countries from different parts of the world
               </p>
             </div>
 
@@ -268,11 +268,11 @@ export default function HomePage() {
                 "Antarctic",
               ].map((region) => (
                 <Link
-                  to={`/regions/${region.toLowerCase()}`}
+                  to={`/countries?region=${region}`}
                   key={region}
-                  className="bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md p-4 text-center transition-all hover:bg-blue-50 dark:hover:bg-gray-600"
+                  className="bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 text-center"
                 >
-                  <div className="text-2xl mb-2">
+                  <div className="text-3xl mb-2">
                     {region === "Africa" && "🌍"}
                     {region === "Americas" && "🌎"}
                     {region === "Asia" && "🌏"}
@@ -280,7 +280,7 @@ export default function HomePage() {
                     {region === "Oceania" && "🏝️"}
                     {region === "Antarctic" && "❄️"}
                   </div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white">
+                  <h3 className="font-bold text-lg text-gray-900 dark:text-white">
                     {region}
                   </h3>
                 </Link>

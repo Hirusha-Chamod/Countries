@@ -40,7 +40,6 @@ export default function CountriesPage() {
     "Antarctic",
   ];
 
-  // Fetch countries using the appropriate endpoint based on filters
   const fetchCountries = async () => {
     setLoading(true);
     try {
