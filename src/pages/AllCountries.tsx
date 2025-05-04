@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { countryAPI } from "../api/country";
+import { useDebounce } from "../utils/useDebounce";
 
 type Country = {
   name: {
@@ -76,9 +77,11 @@ export default function CountriesPage() {
     }
   };
 
+  const debouncedSearchQuery = useDebounce(searchQuery, 300);
+
   useEffect(() => {
     fetchCountries();
-  }, [searchQuery, regionFilter]);
+  }, [debouncedSearchQuery, regionFilter]);
 
   useEffect(() => {
     const query = searchParams.get("search");
