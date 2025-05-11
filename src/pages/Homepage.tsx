@@ -48,6 +48,7 @@ export default function HomePage() {
     fetchFeaturedCountries();
   }, []);
 
+  //Fetch favorite countries
   useEffect(() => {
     const fetchFavoriteCountries = async () => {
       if (!user) {
