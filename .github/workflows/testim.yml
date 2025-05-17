@@ -24,4 +24,4 @@ jobs:
           testim --token "Kr5tvpz5sJ6cSqmGiKtd6h1BFdJbwKkVVaWvGLh4MMvWA1lbFv" \
                  --project "Uq2fzwleotK72p7DjH69" \
                  --label "test-run" \
-                 --url https://countries-wheat-pi.vercel.app/
+                 --urls https://countries-wheat-pi.vercel.app/
